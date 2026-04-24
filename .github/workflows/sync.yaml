@@ -38,7 +38,7 @@ jobs:
           fi
 
           if ! git merge-base --is-ancestor origin/main HEAD; then
-            echo "Refusing non-fast-forward sync to main"
+            echo "Refusing non-fast-forward sync to main. Please review fork-specific commits on main and resolve manually before re-running this workflow."
             exit 1
           fi
 
